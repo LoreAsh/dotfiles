@@ -1,0 +1,82 @@
+// -*- mode: jsonc -*-
+{
+    "height": 34, // Waybar height (to be removed for auto height)
+    "margin-left": 12,
+    "margin-right": 12,
+    "margin-top": 12,
+    // "width": 1280, // Waybar width
+    "spacing": 8, // Gaps between modules (px)
+    // Choose the order of the modules
+    "modules-left": [
+        "hyprland/workspaces",
+    ],
+    "modules-center": [
+        "hyprland/window"
+    ],
+    "modules-right": [
+        "pulseaudio",
+        "network",
+        "cpu",
+        "memory",
+        "clock",
+        "tray",
+    ],
+    "hyprland/workspaces": {
+	    "offscreen-css": true,
+    },
+    "hyprland/window":{
+	    "separate-outputs": true
+    },
+    "tray": {
+        // "icon-size": 21,
+        "spacing": 10,
+        // "icons": {
+        //   "blueman": "bluetooth",
+        //   "TelegramDesktop": "$HOME/.local/share/icons/hicolor/16x16/apps/telegram.png"
+        // }
+    },
+    "clock": {
+	    "format": "{:%I:%M %p}",
+        "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
+        "format-alt": "{:%m-%d-%Y}",
+	"calendar": {
+		"on-scroll": 1,
+                    "format": {
+                              "months":     "<span color='#aaaaaa'><b>{}</b></span>",
+                              "days":       "<span color='#aaaaaa'><b>{}</b></span>",
+                              "weeks":      "<span color='#aaaaaa'>'<b>W{}</b></span>",
+                              "weekdays":   "<span color='#aaaaaa'><b>{}</b></span>",
+                              "today":      "<span color='#66ffcc'><b><u>{}</u></b></span>"
+                              }
+                    }
+
+    },
+    "cpu": {
+        "format": "{usage}% ",
+        "tooltip": false
+    },
+    "memory": {
+        "format": "{}% "
+    },
+    "network": {
+        // "interface": "wlp2*", // (Optional) To force the use of this interface
+        "format-wifi": "Wifi ({signalStrength}%) ",
+        "format-ethernet": "모",
+        "tooltip-format": "{ifname} via {gwaddr} ",
+        "format-linked": "{ifname} (No IP) ",
+        "format-disconnected": "Disconnected ⚠",
+        "format-alt": "{ifname}: {ipaddr}/{cidr}"
+    },
+    "pulseaudio": {
+        "format": "{volume}% {icon} {format_source}",
+        "format-muted": " {format_source}",
+        "format-source": "{volume}% ",
+        "format-source-muted": "",
+        "format-icons": {
+            "headphone": "",
+            "hands-free": "",
+            "headset": "",
+            "default": ["", "", ""]
+        },
+    },
+}
