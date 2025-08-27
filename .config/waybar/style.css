@@ -9,8 +9,9 @@ window#waybar {
 	box-shadow: inset 0 -3px transparent;
 	border-radius: 8px;
 	/* background-color: rgba(22, 44, 44, 1.0);  */
-	background-color: #17484A;
+	/* background-color: #17484A; */
 	/* background-color: #042720; */
+	background-color: #303236;
 	border: none;
 	color: #ffffff;
 	transition-property: background-color;

@@ -42,10 +42,11 @@ config.window_frame = {
 
 	-- active_titlebar_bg = '#17484A',
 	active_titlebar_bg = '#303236',
-	inactive_titlebar_bg = '#17484A',
+	inactive_titlebar_bg = '#303236',
 
 }
 
+-- changes font when switching to NeoVim
 -- wezterm.on('user-var-changed', function(window, pane, name, value)
 --     userVars = pane:get_user_vars()
 --     overrides = window:get_config_overrides() or {}

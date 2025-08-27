@@ -10,9 +10,6 @@
 	"modules-left": [
 		"hyprland/workspaces",
 	],
-	"modules-center": [
-		"hyprland/window"
-	],
 	"modules-right": [
 		"pulseaudio",
 		"network",
@@ -52,11 +49,11 @@
 
 	},
 	"cpu": {
-		"format": "{usage}% ",
+		"format": "CPU:{usage}%",
 		"tooltip": false
 	},
 	"memory": {
-		"format": "{}% "
+		"format": "RAM:{}%"
 	},
 	"network": {
 		// "interface": "wlp2*", // (Optional) To force the use of this interface
